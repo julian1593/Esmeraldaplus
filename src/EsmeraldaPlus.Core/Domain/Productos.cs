@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
     public partial class Productos
     {
@@ -12,9 +12,10 @@ namespace EsmeraldaPlus.Core.Domain
         }
 
         public int IdProducto { get; set; }
-        public int IdTipoDeProductos { get; set; }
+        public int IdTipo { get; set; }
+        public int? ValorProducto { get; set; }
 
-        public virtual TipoDeProductos IdTipoDeProductosNavigation { get; set; }
+        public virtual TipoDeProductos IdTipoNavigation { get; set; }
         public virtual ICollection<Inventario> Inventario { get; set; }
         public virtual ICollection<Pedido> Pedido { get; set; }
     }

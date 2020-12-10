@@ -9685,20 +9685,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
+    "C:\\Users\\Test\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
       "projectName": "EsmeraldaPlus.Web",
-      "projectPath": "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\obj\\",
+      "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
+      "packagesPath": "C:\\Users\\Test\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Test\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9709,13 +9714,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
+            "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
+              "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
             },
-            "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj"
+            "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj"
             }
           }
         }
@@ -9728,7 +9732,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -9781,7 +9784,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

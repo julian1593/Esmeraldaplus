@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
     public partial class Vendedor
     {

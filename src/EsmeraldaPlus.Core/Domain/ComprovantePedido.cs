@@ -1,12 +1,11 @@
-﻿using EsmeraldaPlus.Infrastructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
-    public partial class ComprobantePedido
+    public partial class ComprovantePedido
     {
-        public int IdComprobante { get; set; }
+        public int IdComprovante { get; set; }
         public int? Cantidad { get; set; }
         public int? CostoUnitario { get; set; }
         public int? Total { get; set; }

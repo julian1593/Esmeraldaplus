@@ -1,33 +1,33 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EsmeraldaPlus.Web.Controllers
 {
-    public class ProvedorController : Controller
+    public class HomeController1 : Controller
     {
-        // GET: HomeController3
+        // GET: HomeController1
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: HomeController3/Details/5
+        // GET: HomeController1/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: HomeController3/Create
+        // GET: HomeController1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: HomeController3/Create
+        // POST: HomeController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -42,13 +42,13 @@ namespace EsmeraldaPlus.Web.Controllers
             }
         }
 
-        // GET: HomeController3/Edit/5
+        // GET: HomeController1/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: HomeController3/Edit/5
+        // POST: HomeController1/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -63,13 +63,13 @@ namespace EsmeraldaPlus.Web.Controllers
             }
         }
 
-        // GET: HomeController3/Delete/5
+        // GET: HomeController1/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: HomeController3/Delete/5
+        // POST: HomeController1/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

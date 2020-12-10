@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
     public partial class Cliente
     {
         public Cliente()
         {
-            ComprobantePedido = new HashSet<ComprobantePedido>();
+            ComprovantePedido = new HashSet<ComprovantePedido>();
         }
 
         public int IdCliente { get; set; }
@@ -23,6 +23,6 @@ namespace EsmeraldaPlus.Core.Domain
 
         public virtual TipoDeNumero CodTelefonNavigation { get; set; }
         public virtual Roles IdRolesNavigation { get; set; }
-        public virtual ICollection<ComprobantePedido> ComprobantePedido { get; set; }
+        public virtual ICollection<ComprovantePedido> ComprovantePedido { get; set; }
     }
 }

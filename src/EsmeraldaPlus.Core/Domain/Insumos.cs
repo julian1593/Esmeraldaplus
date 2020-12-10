@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
     public partial class Insumos
     {
@@ -11,9 +11,10 @@ namespace EsmeraldaPlus.Core.Domain
             Produccion = new HashSet<Produccion>();
         }
 
-        public int IdInsumos { get; set; }
+        public int Id { get; set; }
         public int IdTipoDeInsumo { get; set; }
         public int IdProvedor { get; set; }
+        public int? ValorInsumo { get; set; }
 
         public virtual Provedor IdProvedorNavigation { get; set; }
         public virtual TipoDeInsumo IdTipoDeInsumoNavigation { get; set; }

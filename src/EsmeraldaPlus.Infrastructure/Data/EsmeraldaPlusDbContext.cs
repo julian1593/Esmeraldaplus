@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using EsmeraldaPlus.Core.Domain;
+using EsmeraldaPlus.Infrastructure;
 
 namespace EsmeraldaPlus.Infrastructure.Data
 {
@@ -17,7 +17,7 @@ namespace EsmeraldaPlus.Infrastructure.Data
         }
 
         public virtual DbSet<Cliente> Cliente { get; set; }
-        public virtual DbSet<ComprobantePedido> ComprobantePedido { get; set; }
+        public virtual DbSet<ComprovantePedido> ComprovantePedido { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<EmpleadoHasProductos> EmpleadoHasProductos { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
@@ -40,7 +40,7 @@ namespace EsmeraldaPlus.Infrastructure.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("database=proyectoesmeralda;server=localhost;port=3306;user id=root;password=1234");
+                optionsBuilder.UseMySQL("database=proyecto;server=localhost;port=3306;user id=root;password=1234");
             }
         }
 
@@ -102,27 +102,27 @@ namespace EsmeraldaPlus.Infrastructure.Data
                     .HasConstraintName("cliente_ibfk_2");
             });
 
-            modelBuilder.Entity<ComprobantePedido>(entity =>
+            modelBuilder.Entity<ComprovantePedido>(entity =>
             {
-                entity.HasKey(e => e.IdComprobante)
+                entity.HasKey(e => e.IdComprovante)
                     .HasName("PRIMARY");
 
-                entity.ToTable("comprobante_pedido");
+                entity.ToTable("comprovante_pedido");
 
                 entity.HasIndex(e => e.IdCliente)
                     .HasName("Id_Cliente");
 
-                entity.Property(e => e.IdComprobante).HasColumnName("Id_Comprobante");
+                entity.Property(e => e.IdComprovante).HasColumnName("Id_Comprovante");
 
                 entity.Property(e => e.CostoUnitario).HasColumnName("Costo_unitario");
 
                 entity.Property(e => e.IdCliente).HasColumnName("Id_Cliente");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.ComprobantePedido)
+                    .WithMany(p => p.ComprovantePedido)
                     .HasForeignKey(d => d.IdCliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("comprobante_pedido_ibfk_1");
+                    .HasConstraintName("comprovante_pedido_ibfk_1");
             });
 
             modelBuilder.Entity<Empleado>(entity =>
@@ -212,12 +212,7 @@ namespace EsmeraldaPlus.Infrastructure.Data
 
             modelBuilder.Entity<Estado>(entity =>
             {
-                entity.HasKey(e => e.IdEstado)
-                    .HasName("PRIMARY");
-
                 entity.ToTable("estado");
-
-                entity.Property(e => e.IdEstado).HasColumnName("Id_Estado");
 
                 entity.Property(e => e.EstadoProducto)
                     .IsRequired()
@@ -227,9 +222,6 @@ namespace EsmeraldaPlus.Infrastructure.Data
 
             modelBuilder.Entity<Insumos>(entity =>
             {
-                entity.HasKey(e => e.IdInsumos)
-                    .HasName("PRIMARY");
-
                 entity.ToTable("insumos");
 
                 entity.HasIndex(e => e.IdProvedor)
@@ -238,11 +230,11 @@ namespace EsmeraldaPlus.Infrastructure.Data
                 entity.HasIndex(e => e.IdTipoDeInsumo)
                     .HasName("Id_Tipo_de_Insumo");
 
-                entity.Property(e => e.IdInsumos).HasColumnName("Id_insumos");
-
                 entity.Property(e => e.IdProvedor).HasColumnName("Id_Provedor");
 
                 entity.Property(e => e.IdTipoDeInsumo).HasColumnName("Id_Tipo_de_Insumo");
+
+                entity.Property(e => e.ValorInsumo).HasColumnName("Valor_insumo");
 
                 entity.HasOne(d => d.IdProvedorNavigation)
                     .WithMany(p => p.Insumos)
@@ -264,11 +256,11 @@ namespace EsmeraldaPlus.Infrastructure.Data
 
                 entity.ToTable("inventario");
 
+                entity.HasIndex(e => e.IdDelProducto)
+                    .HasName("Id_producto");
+
                 entity.HasIndex(e => e.IdInsumos)
                     .HasName("Id_insumos");
-
-                entity.HasIndex(e => e.IdProducto)
-                    .HasName("Id_producto");
 
                 entity.Property(e => e.IdInventario).HasColumnName("Id_Inventario");
 
@@ -284,21 +276,21 @@ namespace EsmeraldaPlus.Infrastructure.Data
                     .HasColumnName("Fecha_ingreso_producto")
                     .HasColumnType("date");
 
+                entity.Property(e => e.IdDelProducto).HasColumnName("Id_del_producto");
+
                 entity.Property(e => e.IdInsumos).HasColumnName("Id_insumos");
 
-                entity.Property(e => e.IdProducto).HasColumnName("Id_producto");
+                entity.HasOne(d => d.IdDelProductoNavigation)
+                    .WithMany(p => p.Inventario)
+                    .HasForeignKey(d => d.IdDelProducto)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("inventario_ibfk_1");
 
                 entity.HasOne(d => d.IdInsumosNavigation)
                     .WithMany(p => p.Inventario)
                     .HasForeignKey(d => d.IdInsumos)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("inventario_ibfk_2");
-
-                entity.HasOne(d => d.IdProductoNavigation)
-                    .WithMany(p => p.Inventario)
-                    .HasForeignKey(d => d.IdProducto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("inventario_ibfk_1");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
@@ -381,18 +373,28 @@ namespace EsmeraldaPlus.Infrastructure.Data
                     .HasName("Id_Empleado");
 
                 entity.HasIndex(e => e.IdEstado)
-                    .HasName("Id_Estado");
+                    .HasName("Id");
 
                 entity.HasIndex(e => e.IdInsumos)
                     .HasName("Id_insumos");
 
                 entity.Property(e => e.IdProduccion).HasColumnName("Id_Produccion");
 
+                entity.Property(e => e.CantidadInsumos).HasColumnName("Cantidad_insumos");
+
                 entity.Property(e => e.IdEmpleado).HasColumnName("Id_Empleado");
 
                 entity.Property(e => e.IdEstado).HasColumnName("Id_Estado");
 
                 entity.Property(e => e.IdInsumos).HasColumnName("Id_insumos");
+
+                entity.Property(e => e.ProductoP)
+                    .HasColumnName("producto_p")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.UnidadDeMedida)
+                    .HasColumnName("Unidad_de_medida")
+                    .HasMaxLength(15);
 
                 entity.HasOne(d => d.IdEmpleadoNavigation)
                     .WithMany(p => p.Produccion)
@@ -420,16 +422,18 @@ namespace EsmeraldaPlus.Infrastructure.Data
 
                 entity.ToTable("productos");
 
-                entity.HasIndex(e => e.IdTipoDeProductos)
+                entity.HasIndex(e => e.IdTipo)
                     .HasName("Id_Tipo_de_productos");
 
                 entity.Property(e => e.IdProducto).HasColumnName("Id_producto");
 
-                entity.Property(e => e.IdTipoDeProductos).HasColumnName("Id_Tipo_de_productos");
+                entity.Property(e => e.IdTipo).HasColumnName("Id_Tipo");
 
-                entity.HasOne(d => d.IdTipoDeProductosNavigation)
+                entity.Property(e => e.ValorProducto).HasColumnName("Valor_producto");
+
+                entity.HasOne(d => d.IdTipoNavigation)
                     .WithMany(p => p.Productos)
-                    .HasForeignKey(d => d.IdTipoDeProductos)
+                    .HasForeignKey(d => d.IdTipo)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("productos_ibfk_1");
             });
@@ -493,12 +497,7 @@ namespace EsmeraldaPlus.Infrastructure.Data
 
             modelBuilder.Entity<TipoDeInsumo>(entity =>
             {
-                entity.HasKey(e => e.IdTipoDeInsumo)
-                    .HasName("PRIMARY");
-
                 entity.ToTable("tipo_de_insumo");
-
-                entity.Property(e => e.IdTipoDeInsumo).HasColumnName("Id_Tipo_de_Insumo");
 
                 entity.Property(e => e.Insumo).HasMaxLength(25);
             });

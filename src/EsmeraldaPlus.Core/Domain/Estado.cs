@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EsmeraldaPlus.Core.Domain
+namespace EsmeraldaPlus.Infrastructure
 {
     public partial class Estado
     {
@@ -10,7 +10,7 @@ namespace EsmeraldaPlus.Core.Domain
             Produccion = new HashSet<Produccion>();
         }
 
-        public int IdEstado { get; set; }
+        public int Id { get; set; }
         public string EstadoProducto { get; set; }
 
         public virtual ICollection<Produccion> Produccion { get; set; }
