@@ -1,125 +1,128 @@
 ﻿
 @{
     ViewData["Title"] = "Inicio_EsmeraldaPlus";
-    
+
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - EsmeraldaPLus</title>
-        <link rel="stylesheet" href="../css/EstilosInicio.css">
-        <link rel="stylesheet" href="../css/fonts.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EsmeraldaPLus</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="../image/logo.png">
+    <header class="container-header">
+        <div class="titulo"><h1>Esmeralda plus</h1></div>
+
+        <div class="login">
+            <a asp-area="" asp-controller="inicio" asp-action="Index">Ingresar</a>
+            <a asp-area="" asp-controller="Registrarse" asp-action="Index">Registrarse</a>
         </div>
-
-        <div class="search">
-            <input type="search" class="bar-search" placeholder="Buscar....">
-        </div>
-
-        <div class="login-page">
-            <a href="Login.html" class="login">Ingresar</a>
-            <a href="register.html" class="register">registrarse</a>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#"><span class="icon-home"></span>Inicio</a></li>
-
-                <li>
-                    <a href="#"><span class="icon-cart"></span>Productos</a>
-                    <!--<ul>
-                    <li><a href="#">Gel AntiBacterial</a></li>
-                    <li><a href="#">Trajes Antifluido</a></li>
-                    <li><a href="#">Tapabocas</a></li>
-                    <li><a href="#">Alcohol AntiBacterial</a></li>
-                </ul>-->
-                </li>
-
-                <li>
-                    <a href="about us.html"><span class="icon-price-tag"></span>Quienes somos</a>
-                    <!--<ul>
-                    <li><a href="#">Mision y Vision</a></li>
-                    <li><a href="#">Objetivos y Valores</a></li>
-                </ul>-->
-                </li>
-
-                <li><a href="contact.html"><span class="icon-envelop"></span>Contactanos</a></li>
-            </ul>
-        </nav>
-
-
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <div class="home-page">
-                <h1>Bienvenido a Distribuidora Esmeralda</h1>
-                <div>
-                    <h2>Trajes</h2>
-                    <img src="../image/trajes.jpg" alt="">
-                </div>
 
-                <div>
-                    <h2>Gel AntiBacterial</h2>
-                    <img src="../image/geles.jpg" alt="">
-                </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a asp-area="" asp-controller="Productos" asp-action="Index">Productos</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a asp-area="" asp-controller="Contactenos" asp-action="Index">Contactanos</a></li>
+        </ul>
+    </nav>
 
-                <div>
-                    <h2>Alcoholes</h2>
-                    <img src="../image/alcoholes.jpg" alt="">
-                </div>
-
-                <div class="comprar-producto">
-                    <a href="Login.html">Comprar</a>
-                    <a href="Login.html">Comprar</a>
-                    <a href="Login.html">Comprar</a>
-                </div>
-
-                <div>
-                    <h2>Trajes</h2>
-                    <img src="../image/trajes.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2>Gel AntiBacterial</h2>
-                    <img src="../image/geles.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2>Alcoholes</h2>
-                    <img src="../image/alcoholes.jpg" alt="">
-                </div>
-
-                <div class="comprar-producto">
-                    <a href="Login.html">Comprar</a>
-                    <a href="Login.html">Comprar</a>
-                    <a href="Login.html">Comprar</a>
-                </div>
-
-            </div>
-                @RenderBody()
-        </main>
-
+    <div class="menu">
+        <span class="icon-menu"> Menu</span>
     </div>
 
+    <div class="home-page">
+        <main role="main" class="pb-3">
+            <div>
+                <h2>Trajes</h2>
+                <img src="../image/trajes.jpg" alt="">
+            </div>
+
+            <div>
+                <h2>Gel AntiBacterial</h2>
+                <img src="../image/geles.jpg" alt="">
+            </div>
+
+            <div>
+                <h2>Alcoholes</h2>
+                <img src="../image/alcoholes.jpg" alt="">
+            </div>
+
+            <div class="comprar-producto">
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+            </div>
+
+            <div>
+                <h2>Jabon</h2>
+                <img src="../image/jabones.jpg" alt="">
+            </div>
+
+            <div>
+                <h2>Tapete desinfectante</h2>
+                <img src="../image/Tapete.jpg" alt="">
+            </div>
+
+            <div>
+                <h2>Fumigador</h2>
+                <img src="../image/fumigadora.jpg" alt="">
+            </div>
+
+            <div class="comprar-producto">
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+                <a asp-area="" asp-controller="inicio" asp-action="Index">Comprar</a>
+            </div>
+            @RenderBody()
+        </main>
+</div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <footer class="footer">
         <div class="contacto">
             <div class="siguenos">
                 <p>siguenos</p>
-                <a><span class="icon-facebook"></span></a>
-                <a><span class="icon-twitter"></span></a>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
                 <span class="icon-instagram"></span>
             </div>
-
+            
             <div class="contactanos">
                 <p>Contactanos</p>
                 <a href="#">6852899</a>
@@ -129,9 +132,9 @@
         </div>
     </footer>
     @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 </body>
 </html>
-
 
 
 

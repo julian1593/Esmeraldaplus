@@ -9691,11 +9691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
       "projectName": "EsmeraldaPlus.Web",
-      "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
+      "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\EsmeraldaPlus.Web.csproj",
       "packagesPath": "C:\\Users\\Test\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\obj\\",
+      "outputPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -9715,11 +9715,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
-              "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
+            "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
+              "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
             },
-            "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj"
+            "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj"
             }
           }
         }

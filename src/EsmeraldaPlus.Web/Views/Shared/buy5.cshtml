@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Buy";
+
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Buy</title>
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+
+<body>
+
+    <header class="container-header">
+        <div class="titulo"><h1>Esmeralda plus</h1></div>
+        <div class="login">
+            <a href="homepage.html">Cerrar Sesion</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="sessionstarted.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="contact.html">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu">
+        <span class="icon-menu"> Menu</span>
+    </div>
+
+    <div class="buy">
+
+        <div class="image">
+            <img src="../image/Tapabocas_de_tela_adidas_TALLA_XS-S_(PACK_DE_3)_(UNISEX)_Negro_H13185_01_laydown.jpg" alt="">
+        </div>
+
+        <div class="information">
+            <h1>TapaBocas</h1>
+            <p>El cubrebocas o tapabocas es un utensilio esencial para evitar la contaminación microbiológica emitida por la boca y la nariz. Por ello, su principal función es impedir el contacto de estas cuando se manipulan alimentos u otros productos que puedan verse contaminados.</p>
+        </div>
+
+        <div class="cart">
+            <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+            <a href=""><span class="icon-credit-card"></span>Comprar</a>
+        </div>
+        @RenderBody()
+    </div>
+
+
+    <footer class="footer">
+        <div class="contacto">
+            <div class="siguenos">
+                <p>siguenos</p>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
+                <span class="icon-instagram"></span>
+            </div>
+
+            <div class="contactanos">
+                <p>Contactanos</p>
+                <a href="#">6852899</a>
+                <a href="#">3214567899</a>
+            </div>
+
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

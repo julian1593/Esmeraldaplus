@@ -5,6 +5,7 @@
 }
 
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,47 +14,29 @@
     <title>@ViewData["Title"] - Contact</title>
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/fonts.css">
-
 </head>
 <body>
 
-
-    <header>
-        <div class="logo">
-            <img src="../image/logo.png">
+    <header class="container-header">
+        <div class="titulo"><h1>Esmeralda plus</h1></div>
+        <div class="login">
+            <a asp-area="" asp-controller="inicio" asp-action="Index">Ingresar</a>
+            <a asp-area="" asp-controller="Registrarse" asp-action="Index">Registrarse</a>
         </div>
-
-        <div class="search">
-            <input type="search" class="bar-search" placeholder="Buscar....">
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#"><span class="icon-home"></span>Inicio</a></li>
-
-                <li>
-                    <a href="#"><span class="icon-cart"></span>Productos</a>
-                    <!--<ul>
-                        <li><a href="#">Gel AntiBacterial</a></li>
-                        <li><a href="#">Trajes Antifluido</a></li>
-                        <li><a href="#">Tapabocas</a></li>
-                        <li><a href="#">Alcohol AntiBacterial</a></li>
-                    </ul>-->
-                </li>
-
-                <li>
-                    <a href="about us.html"><span class="icon-price-tag"></span>Quienes somos</a>
-                    <!--<ul>
-                        <li><a href="#">Mision y Vision</a></li>
-                        <li><a href="#">Objetivos y Valores</a></li>
-                    </ul>-->
-                </li>
-
-                <li><a href="#"><span class="icon-envelop"></span>Contactanos</a></li>
-            </ul>
-        </nav>
-
     </header>
+
+    <nav>
+        <ul>
+            <li><a asp-area="" asp-controller="HomeController1" asp-action="Index">Inicio</a></li>
+            <li><a asp-area="" asp-controller="Productos" asp-action="Index">Productos</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="#">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu">
+        <span class="icon-menu"> Menu</span>
+    </div>
 
     <form action="">
         <h1>Contacto</h1>
@@ -69,14 +52,14 @@
         <h1>Ubicacion</h1>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.745965330832!2d-74.16063678573687!3d4.639344643479545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c3ababaf9d5%3A0x72efa6111527e06c!2zQ2wuIDIgIzg2LCBCb2dvdMOh!5e0!3m2!1ses!2sco!4v1606875074020!5m2!1ses!2sco" width="470" height="380" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-
+    @RenderBody()
 
     <footer class="footer">
         <div class="contacto">
             <div class="siguenos">
                 <p>siguenos</p>
-                <span class="icon-facebook"></span></a>
-                <span class="icon-twitter"></span></a>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
                 <span class="icon-instagram"></span>
             </div>
 
@@ -89,7 +72,7 @@
         </div>
     </footer>
 
-
+    @RenderSection("Scripts", required: false)
 
 </body>
 </html>

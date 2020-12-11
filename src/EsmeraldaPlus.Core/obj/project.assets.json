@@ -6176,11 +6176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj",
       "projectName": "EsmeraldaPlus.Core",
-      "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj",
+      "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj",
       "packagesPath": "C:\\Users\\Test\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\obj\\",
+      "outputPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

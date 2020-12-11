@@ -6232,11 +6232,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
       "projectName": "EsmeraldaPlus.Infrastructure",
-      "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Test\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -6256,8 +6256,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
-              "projectPath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
+            "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj": {
+              "projectPath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Core\\EsmeraldaPlus.Core.csproj"
             }
           }
         }

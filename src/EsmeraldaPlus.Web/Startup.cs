@@ -58,6 +58,7 @@ namespace EsmeraldaPlus.Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=HomeController1}/{action=Index}/{id?}");
+                    
             });
         }
     }

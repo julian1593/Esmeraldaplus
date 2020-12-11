@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uzWu1n69/98zH2EqsJkO/jKEl40I/u4N8hFl+BB7E5EFuk/owdnla0kOnM9eJAaxOwPOz22zPsCjrNmVbtVT6Q==",
+  "dgSpecHash": "FOcHGc+TNYAl6kOkfZk9TnbKqwZhgKo5JKIDJKeX60a0NImlC8EoCHECyWUP2hxazjmvBY1yBKiMcjFYwpmIbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Test\\EsmeraldaPlus\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Test\\Desktop\\EsmeraldaPlus\\src\\EsmeraldaPlus.Infrastructure\\EsmeraldaPlus.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Test\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Test\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",

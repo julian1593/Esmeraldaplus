@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Buy";
+
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Buy</title>
+    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+
+<body>
+
+    <header class="container-header">
+        <div class="titulo"><h1>Esmeralda plus</h1></div>
+        <div class="login">
+            <a href="homepage.html">Cerrar Sesion</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="sessionstarted.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="contact.html">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu">
+        <span class="icon-menu"> Menu</span>
+    </div>
+
+    <div class="buy">
+
+        <div class="image">
+            <img src="../image/fumigadora.jpg" alt="">
+        </div>
+
+        <div class="information">
+            <h1>Fumigadora</h1>
+            <p>Una fumigadora es una máquina agrícola encargada de fumigar zonas de terreno. La tarea de fumigar consiste en esparcir un compuesto plaguicida de diferentes formas, para proteger un cultivo o un terreno de agentes nocivos para el mismo.</p>
+        </div>
+
+        <div class="cart">
+            <a href=""><span class="icon-cart"></span>Agregar al Carrito</a>
+            <a href=""><span class="icon-credit-card"></span>Comprar</a>
+        </div>
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <div class="contacto">
+            <div class="siguenos">
+                <p>siguenos</p>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
+                <span class="icon-instagram"></span>
+            </div>
+
+            <div class="contactanos">
+                <p>Contactanos</p>
+                <a href="#">6852899</a>
+                <a href="#">3214567899</a>
+            </div>
+
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>
